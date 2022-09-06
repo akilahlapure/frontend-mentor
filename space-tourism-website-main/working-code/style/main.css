@@ -1,8 +1,14 @@
 @import url("https://fonts.googleapis.com/css2?family=Barlow&family=Barlow+Condensed&family=Bellefair&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
 body {
   background-image: url(../assets/home/background-home-desktop.jpg);
-  color: #FFF;
-  margin: 0;
+  color: #FFFFFF;
 }
 
 nav {
@@ -18,12 +24,14 @@ nav {
   padding: 2em 0 2em;
 }
 
-nav .icon {
-  background-color: #FFF;
-  border-radius: 50%;
-  width: 48px;
-  height: 48px;
+nav .logo {
   margin-left: 52px;
+}
+
+nav .toggle {
+  color: white;
+  display: none;
+  margin-right: 24px;
 }
 
 nav ul {
@@ -37,30 +45,110 @@ nav ul {
       -ms-flex-pack: center;
           justify-content: center;
   list-style: none;
-  width: 50%;
-  padding: 2em;
+  width: 55%;
   margin: 0;
 }
 
 nav ul li {
-  font-family: 'Barlow Condensed', sans-serif;
-  letter-spacing: 2.7px;
-  padding-left: 1em;
-  padding-right: 1em;
+  padding: 2em 1em;
+  border-bottom: 2px solid transparent;
 }
 
 nav ul li a {
-  color: #FFF;
+  color: #FFFFFF;
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 16px;
+  letter-spacing: 2.7px;
   text-decoration: none;
 }
 
-nav .line {
-  position: absolute;
-  width: 473px;
-  height: 1px;
-  left: 167px;
-  background: #FFFFFF;
-  mix-blend-mode: normal;
-  opacity: 0.25;
+nav ul li:hover {
+  border-bottom: 1px solid #FFFFFF;
+}
+
+nav ul .active-page {
+  border-bottom: 2px solid #FFFFFF;
+}
+
+.sidenav {
+  display: none;
+}
+
+@media screen and (min-width: 376px) and (max-width: 768px) {
+  body {
+    background-image: url(../assets/home/background-home-tablet.jpg);
+  }
+  nav {
+    padding: 0 0 2em;
+  }
+  nav ul {
+    width: 70%;
+  }
+  nav ul li {
+    padding-left: 12px;
+    padding-left: 12px;
+  }
+  nav ul li a {
+    font-size: 14px;
+  }
+  nav b {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 0px) and (max-width: 375px) {
+  body {
+    background-image: url(../assets/home/background-home-mobile.jpg);
+  }
+  nav {
+    padding: 1em 0 2em;
+  }
+  nav .logo {
+    margin-left: 24px;
+  }
+  nav .toggle {
+    display: block;
+  }
+  nav ul {
+    display: none;
+  }
+  .sidenav {
+    background: rgba(255, 255, 255, 0.04);
+    -webkit-backdrop-filter: blur(81.5485px);
+            backdrop-filter: blur(81.5485px);
+    display: block;
+    padding-top: 60px;
+    position: fixed;
+    height: 100%;
+    width: 0;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    overflow-x: hidden;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+  }
+  .sidenav a {
+    color: #FFFFFF;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 16px;
+    letter-spacing: 2.7px;
+    display: block;
+    text-decoration: none;
+    margin: 2em 0 2em 3em;
+  }
+  .sidenav a:hover {
+    font-weight: bold;
+  }
+  .sidenav .active-page-side {
+    border-right: 2px solid white;
+  }
+  .sidenav .closebtn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 20px;
+    height: 20px;
+  }
 }
 /*# sourceMappingURL=main.css.map */
