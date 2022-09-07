@@ -77,6 +77,12 @@ main {
                 height: 24px;
             }
 
+            &:hover {
+                cursor: pointer;
+                background: #53FFAB;
+                box-shadow: 0px 0px 28px 4px rgba(83, 255, 171, 0.5);
+            }
+
             &:active {
                 cursor: pointer;
                 background: #53FFAB;

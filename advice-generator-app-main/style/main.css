@@ -82,6 +82,13 @@ main .divider .icon-dice img {
   height: 24px;
 }
 
+main .divider .icon-dice:hover {
+  cursor: pointer;
+  background: #53FFAB;
+  -webkit-box-shadow: 0px 0px 28px 4px rgba(83, 255, 171, 0.5);
+          box-shadow: 0px 0px 28px 4px rgba(83, 255, 171, 0.5);
+}
+
 main .divider .icon-dice:active {
   cursor: pointer;
   background: #53FFAB;
