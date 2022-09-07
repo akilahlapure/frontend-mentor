@@ -65,7 +65,7 @@ main {
             border-style: none;
             position: absolute;
             top: 50px;
-            left: 45%;
+            left: 214px;
             width: 52px;
             height: 52px;
             display: flex;
@@ -84,5 +84,42 @@ main {
             }
         }
     }
+}
 
+/* Media queries */
+@mixin breakpoint($minwidth, $maxwidth) {
+    @media screen and (min-width:$minwidth) and (max-width:$maxwidth) {
+        @content; // pass content
+    }
+}
+
+// tablets
+@include breakpoint(481px, 768px){ 
+
+    main {
+        width: 480px;
+    
+        .divider{
+            background-image: url(../images/pattern-divider-mobile.svg);
+
+            .icon-dice {
+                left: 186px;
+            }
+        }
+        
+    }
+}
+
+// mobile
+@include breakpoint(0px, 480px){ 
+
+    main {
+        width: 360px;
+
+        .divider{
+            .icon-dice {
+                left: 126px;
+            }
+        }
+    }
 }

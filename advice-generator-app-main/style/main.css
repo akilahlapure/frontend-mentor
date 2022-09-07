@@ -63,7 +63,7 @@ main .divider .icon-dice {
   border-style: none;
   position: absolute;
   top: 50px;
-  left: 45%;
+  left: 214px;
   width: 52px;
   height: 52px;
   display: -webkit-box;
@@ -87,5 +87,27 @@ main .divider .icon-dice:active {
   background: #53FFAB;
   -webkit-box-shadow: 0px 0px 28px 10px rgba(83, 255, 171, 0.5);
           box-shadow: 0px 0px 28px 10px rgba(83, 255, 171, 0.5);
+}
+
+/* Media queries */
+@media screen and (min-width: 481px) and (max-width: 768px) {
+  main {
+    width: 480px;
+  }
+  main .divider {
+    background-image: url(../images/pattern-divider-mobile.svg);
+  }
+  main .divider .icon-dice {
+    left: 186px;
+  }
+}
+
+@media screen and (min-width: 0px) and (max-width: 480px) {
+  main {
+    width: 360px;
+  }
+  main .divider .icon-dice {
+    left: 126px;
+  }
 }
 /*# sourceMappingURL=main.css.map */
