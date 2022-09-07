@@ -1,1 +1,91 @@
-/* No CSS *//*# sourceMappingURL=main.css.map */
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@800&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  background-color: #1f2632;
+  color: #cee3e9;
+  font-family: 'Manrope', sans-serif;
+}
+
+main {
+  background-color: #323a49;
+  padding: 2em;
+  border-radius: 16px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column;
+          flex-flow: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  row-gap: 28px;
+  width: 540px;
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+main h5 {
+  color: #52ffa8;
+  font-size: 12px;
+  letter-spacing: 4px;
+}
+
+main q {
+  color: #cee3e9;
+  font-size: 28px;
+}
+
+main .divider {
+  background-image: url(../images/pattern-divider-desktop.svg);
+  background-position: center;
+  width: 100%;
+  height: 16px;
+  margin-top: 16px;
+  margin-bottom: 28px;
+  position: relative;
+}
+
+main .divider .icon-dice {
+  background-color: #52ffa8;
+  border-radius: 50%;
+  border-style: none;
+  position: absolute;
+  top: 50px;
+  left: 45%;
+  width: 52px;
+  height: 52px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+main .divider .icon-dice img {
+  width: 24px;
+  height: 24px;
+}
+
+main .divider .icon-dice:active {
+  cursor: pointer;
+  background: #53FFAB;
+  -webkit-box-shadow: 0px 0px 28px 10px rgba(83, 255, 171, 0.5);
+          box-shadow: 0px 0px 28px 10px rgba(83, 255, 171, 0.5);
+}
+/*# sourceMappingURL=main.css.map */
