@@ -20,6 +20,7 @@ This is a solution to the [QR code component challenge on Frontend Mentor](https
 ### Links
 
 - Solution URL: [Github](https://github.com/akilahlapure/frontend-mentor/tree/main/qr-code-component-main)
+- Live URL: [Netlify](https://byooki-qr-code-component.netlify.app/)
 
 ## My process
 
