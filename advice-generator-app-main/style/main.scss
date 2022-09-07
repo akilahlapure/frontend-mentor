@@ -86,6 +86,16 @@ main {
     }
 }
 
+.attribution {
+    font-size: 11px;
+    text-align: center;
+    margin-top: 12px;
+
+    a {
+        color: $primary-green-neon;
+    }
+}
+
 /* Media queries */
 @mixin breakpoint($minwidth, $maxwidth) {
     @media screen and (min-width:$minwidth) and (max-width:$maxwidth) {
