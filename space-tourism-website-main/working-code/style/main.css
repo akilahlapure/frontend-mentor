@@ -1,3 +1,6 @@
+/* ---------------------------------------------- */
+/*                      RESET                     */
+/* ---------------------------------------------- */
 @import url("https://fonts.googleapis.com/css2?family=Barlow&family=Barlow+Condensed&family=Bellefair&display=swap");
 * {
   margin: 0;
@@ -6,9 +9,38 @@
           box-sizing: border-box;
 }
 
+/* ---------------------------------------------- */
+/*                 FONTS AND COLORS               */
+/* ---------------------------------------------- */
+/* ---------------------------------------------- */
+/*                 UTILITY CLASSES                */
+/* ---------------------------------------------- */
+.flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.container {
+  margin: 2em auto;
+  padding-inline: 12rem;
+}
+
+.active-page {
+  border-bottom: 2px solid #FFFFFF;
+}
+
+.active-page-side {
+  border-right: 2px solid #FFFFFF;
+}
+
+/* ---------------------------------------------- */
+/*                     STYLING                    */
+/* ---------------------------------------------- */
 body {
   background-image: url(../assets/home/background-home-desktop.jpg);
   color: #FFFFFF;
+  font-family: 'Barlow', sans-serif;
 }
 
 nav {
@@ -66,26 +98,69 @@ nav ul li:hover {
   border-bottom: 1px solid #FFFFFF;
 }
 
-nav ul .active-page {
-  border-bottom: 2px solid #FFFFFF;
-}
-
 .sidenav {
   display: none;
 }
 
+.home {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: end;
+}
+
+.home .home-content {
+  width: 50%;
+}
+
+.home .home-content h5 {
+  color: #D0D6F9;
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 28px;
+  letter-spacing: 4.75px;
+}
+
+.home .home-content h1 {
+  font-family: 'Bellefair', serif;
+  font-size: 150px;
+  font-weight: 400;
+}
+
+.home .home-content p {
+  line-height: 2;
+  color: #D0D6F9;
+}
+
+.home .home-btn {
+  border-radius: 50%;
+  border-style: none;
+  width: 274px;
+  height: 274px;
+}
+
+.home .home-btn p {
+  font-family: 'Bellefair', serif;
+  font-size: 32px;
+  font-weight: 400;
+  letter-spacing: 2px;
+}
+
+/* ---------------------------------------------- */
+/*                  MEDIA QUERIES                 */
+/* ---------------------------------------------- */
 @media screen and (min-width: 376px) and (max-width: 768px) {
   body {
     background-image: url(../assets/home/background-home-tablet.jpg);
   }
   nav {
-    padding: 0 0 2em;
+    padding-bottom: 2em;
   }
   nav ul {
     width: 70%;
   }
   nav ul li {
-    padding-left: 12px;
     padding-left: 12px;
   }
   nav ul li a {
@@ -139,9 +214,6 @@ nav ul .active-page {
   }
   .sidenav a:hover {
     font-weight: bold;
-  }
-  .sidenav .active-page-side {
-    border-right: 2px solid white;
   }
   .sidenav .closebtn {
     position: absolute;

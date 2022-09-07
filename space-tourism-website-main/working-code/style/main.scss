@@ -1,4 +1,16 @@
-// FONTS
+/* ---------------------------------------------- */
+/*                      RESET                     */
+/* ---------------------------------------------- */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ---------------------------------------------- */
+/*                 FONTS AND COLORS               */
+/* ---------------------------------------------- */
 @import url('https://fonts.googleapis.com/css2?family=Barlow&family=Barlow+Condensed&family=Bellefair&display=swap');
 
 //  Font styles
@@ -8,6 +20,7 @@ $letter-spacing: 2.35px, 2.7px, 4.75px;
 @mixin bellefair($size){
     font-family: 'Bellefair', serif;
     font-size: $size;
+    font-weight: 400;
 }
 
 @mixin barlowcondensed($size, $spacing, $color){
@@ -17,28 +30,40 @@ $letter-spacing: 2.35px, 2.7px, 4.75px;
     letter-spacing: $spacing;
 }
 
-// COLORS
+// Colors
 $color-dark: #0B0D17;
 $color-light-indigo: #D0D6F9;
 $color-white: #FFFFFF;
 
-// Media queries
-@mixin breakpoint($minwidth, $maxwidth) {
-    @media screen and (min-width:$minwidth) and (max-width:$maxwidth) {
-        @content; // pass content
-    }
+/* ---------------------------------------------- */
+/*                 UTILITY CLASSES                */
+/* ---------------------------------------------- */
+
+.flex {
+    display: flex;
 }
 
-// STYLING
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+.container {
+    margin: 2em auto;
+    padding-inline: 12rem;
 }
+
+.active-page {
+    border-bottom: 2px solid $color-white;
+}
+
+.active-page-side {
+    border-right: 2px solid $color-white;
+}
+
+/* ---------------------------------------------- */
+/*                     STYLING                    */
+/* ---------------------------------------------- */
 
 body {
     background-image: url(../assets/home/background-home-desktop.jpg);
     color: $color-white;
+    font-family: 'Barlow', sans-serif;
 }
 
 nav {
@@ -51,9 +76,6 @@ nav {
     .logo { margin-left: 52px; }
 
     .toggle {
-        // width: 100%;
-        // padding: 0 20px;
-        // text-align: right;
         color: white;
         display: none;
         margin-right: 24px;
@@ -82,10 +104,6 @@ nav {
             }
 
         }
-
-        .active-page {
-            border-bottom: 2px solid #FFFFFF;
-        }
     }
 }
 
@@ -93,17 +111,58 @@ nav {
     display: none;
 }
 
-@include breakpoint(376px, 768px){ // devices 768px until 376px (width)
+.home {
+    justify-content: space-between;
+    align-items: end;
+
+    .home-content {
+        width: 50%;
+
+        h5 { @include barlowcondensed(nth($font-size, 3), nth($letter-spacing, 3), $color-light-indigo); }
+    
+        h1 { @include bellefair(nth($font-size, 7)); }
+    
+        p {
+            line-height: 2;
+            color: $color-light-indigo;
+        }
+    }
+
+    .home-btn {
+        border-radius: 50%;
+        border-style: none;
+        width: 274px;
+        height: 274px;
+
+        p {
+            @include bellefair(nth($font-size, 4));
+            letter-spacing: 2px;
+        }
+    }
+    
+}
+
+/* ---------------------------------------------- */
+/*                  MEDIA QUERIES                 */
+/* ---------------------------------------------- */
+
+@mixin breakpoint($minwidth, $maxwidth) {
+    @media screen and (min-width:$minwidth) and (max-width:$maxwidth) {
+        @content; // pass content
+    }
+}
+
+// devices 768px until 376px (width)
+@include breakpoint(376px, 768px){ 
     body { background-image: url(../assets/home/background-home-tablet.jpg); }
 
     nav{
-        padding: 0 0 2em;
+        padding-bottom: 2em;
 
         ul {
             width: 70%;
         
             li {
-                padding-left: 12px;
                 padding-left: 12px;
 
                 a { font-size: nth($font-size, 1); }
@@ -116,7 +175,8 @@ nav {
     
 }
 
-@include breakpoint(0px, 375px){ // devices 375px and below (width)
+// devices 375px and below (width)
+@include breakpoint(0px, 375px){ 
     body { background-image: url(../assets/home/background-home-mobile.jpg); }
 
     nav{
@@ -153,10 +213,6 @@ nav {
             &:hover {
                 font-weight: bold;
             }
-        }
-
-        .active-page-side {
-            border-right: 2px solid white;
         }
 
         .closebtn {
