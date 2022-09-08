@@ -11,36 +11,49 @@ body {
   font-family: 'Outfit', sans-serif;
 }
 
-.card {
+main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  min-height: 100vh;
+}
+
+main .card {
   background-color: white;
   border-radius: 12px;
-  display: -ms-grid;
-  display: grid;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   row-gap: 16px;
   width: 300px;
   padding: 20px;
   -webkit-box-shadow: 0px 3px 12px 6px rgba(223, 223, 223, 0.25);
           box-shadow: 0px 3px 12px 6px rgba(223, 223, 223, 0.25);
   border-radius: 12px;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
 }
 
-.card img {
+main .card img {
   border-radius: 12px;
   width: 100%;
 }
 
-.card h1 {
+main .card h1 {
   color: #1f3251;
   font-size: 22px;
   text-align: center;
 }
 
-.card p {
+main .card p {
   color: #7b879d;
   font-size: 15px;
   margin-bottom: 12px;
@@ -50,7 +63,11 @@ body {
 .attribution {
   font-size: 11px;
   text-align: center;
-  margin-top: 16px;
+  position: absolute;
+  top: 24px;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
 }
 
 .attribution a {
