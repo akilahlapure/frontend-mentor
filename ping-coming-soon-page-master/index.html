@@ -1,34 +1,91 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- displays site properly based on user's device -->
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Ping coming soon page</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+    <link rel="stylesheet" href="./style/main.css">
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
+    <title>Frontend Mentor | Ping coming soon page</title>
 </head>
+
 <body>
 
-  We are launching soon!
+    <header role="banner">
+        <h2>PING<span class="dot">.</span></h2>
+    </header>
 
-  Subscribe and get notified
+    <main>
+        <div class="announcement">
+            <h1>We are launching <b>soon!</b></h1>
+            <p>Subscribe and get notified</p>
+        </div>
+        
+        <div class="notify-email">
+            <div class="input-email">
+                <input type="email" name="email" id="inputEmail" placeholder="Your email address..." required>
+                <p id="feedback" class="feedback"></p>
+            </div>
+            
+            <input type="submit" class="button" onclick="validateEmail()" value="Notify Me">
+        </div>
+        
+        <div>
+            <img src="./images/illustration-dashboard.png" alt="">
+        </div>
+    </main>
 
-  Notify Me
 
-  &copy; Copyright Ping. All rights reserved.
+    <footer>
+        <div class="copyright">
+            <div class="socials">
+                <div class="border"><img src="./images/facebook-f.svg" alt="facebook-icon"></div>
+                <div class="border"><img src="./images/twitter.svg" alt="twitter-icon"></div>
+                <div class="border"><img src="./images/instagram.svg" alt="instagram-icon"></div>
+            </div>
+            <p>&copy; Copyright Ping. All rights reserved.</p>
+        </div>
 
-  <footer>
-    <p class="attribution">
-      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-      Coded by <a href="#">Your Name Here</a>.
-    </p>
-  </footer>
+        <p class="attribution">
+            Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+            Coded by <a href="#">Akilah Lapure</a>.
+        </p>
+    </footer>
+
+    <script>
+        const user_input = document.getElementById("inputEmail");
+        const valid_feedback = document.getElementById("feedback");
+
+        function validateEmail() {
+            let message = "";
+
+            if (user_input.value == ""){
+                user_input.classList.add("error-border");
+                message = "Whoops! It looks like you forgot to add your email";
+
+                console.log(message);
+
+            } else if (!isEmail(user_input.value)){
+                user_input.classList.add("error-border");
+                message = "Please provide a valid email address";
+
+                console.log(message);
+            } else {
+                user_input.classList.remove("error-border");
+
+                alert("Thank you for subscribing!");
+            }
+
+            valid_feedback.innerHTML = message;
+        }
+
+        function isEmail(email) {
+            return /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(email);
+        }
+    </script>
 </body>
+
 </html>
