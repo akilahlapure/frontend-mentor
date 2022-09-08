@@ -129,7 +129,7 @@ main .notify-email .input-email .feedback {
 }
 
 main .notify-email .button {
-  background: #5079F5;
+  background: #4f7df3;
   -webkit-box-shadow: 0px 2px 12px 2px rgba(77, 123, 243, 0.25);
           box-shadow: 0px 2px 12px 2px rgba(77, 123, 243, 0.25);
   border-style: none;
@@ -142,6 +142,7 @@ main .notify-email .button {
 }
 
 main .notify-email .button:hover {
+  background: #7ea0f6;
   -webkit-box-shadow: 0px 2px 12px 6px rgba(77, 123, 243, 0.25);
           box-shadow: 0px 2px 12px 6px rgba(77, 123, 243, 0.25);
   cursor: pointer;
@@ -187,6 +188,16 @@ footer .copyright .socials .border img {
   padding: 4px;
 }
 
+footer .copyright .socials .border:hover {
+  background-color: #4f7df3;
+  cursor: pointer;
+}
+
+footer .copyright .socials .border:hover img {
+  -webkit-filter: invert(100%) sepia(100%) saturate(18%) hue-rotate(321deg) brightness(105%) contrast(105%);
+          filter: invert(100%) sepia(100%) saturate(18%) hue-rotate(321deg) brightness(105%) contrast(105%);
+}
+
 footer .copyright .socials p {
   color: #969696;
 }
@@ -197,13 +208,42 @@ footer .copyright p {
   text-align: center;
 }
 
-.attribution {
+footer .attribution {
   font-size: 11px;
   text-align: center;
   margin-top: 12px;
 }
 
-.attribution a {
+footer .attribution a {
   color: #3e52a3;
+}
+
+@media screen and (max-width: 376px) {
+  body {
+    margin-inline: 4px;
+  }
+  main .announcement h1 {
+    font-size: 28px;
+  }
+  main .notify-email {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  main .notify-email .button {
+    width: 100%;
+  }
+  main .dashboard {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  main .dashboard img {
+    width: 280px;
+  }
 }
 /*# sourceMappingURL=main.css.map */

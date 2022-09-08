@@ -107,7 +107,7 @@ main {
         }
 
         .button {
-            background: #5079F5;
+            background:$primary-blue;
             box-shadow: 0px 2px 12px 2px rgba(77, 123, 243, 0.25);
             border-style: none;
             border-radius: 28px;
@@ -118,6 +118,7 @@ main {
             padding: 12px 32px;
 
             &:hover{
+                background: lighten($primary-blue, 10%);
                 box-shadow: 0px 2px 12px 6px rgba(77, 123, 243, 0.25);
                 cursor: pointer;
             }
@@ -156,6 +157,15 @@ footer {
                     height: 24px;
                     padding: 4px;
                 }
+
+                &:hover {
+                    background-color: $primary-blue;
+                    cursor: pointer;
+
+                    img {
+                        filter: invert(100%) sepia(100%) saturate(18%) hue-rotate(321deg) brightness(105%) contrast(105%);
+                    }
+                }
             }
 
             p {
@@ -169,12 +179,42 @@ footer {
             text-align: center;
         }
     }
+
+    .attribution { 
+        font-size: 11px; 
+        text-align: center; 
+        margin-top: 12px;
+    
+        a { color: hsl(228, 45%, 44%); }
+    }
 }
 
-.attribution { 
-    font-size: 11px; 
-    text-align: center; 
-    margin-top: 12px;
+// Media Query
+@media screen and (max-width: 376px) {
 
-    a { color: hsl(228, 45%, 44%); }
+    body {
+        margin-inline: 4px;
+    }
+
+    main {
+        .announcement {
+            h1 { font-size: 28px; }
+        }
+
+        .notify-email {
+            flex-direction: column;
+
+            .button {
+                width: 100%;
+            }
+        }
+
+        .dashboard {
+            display: flex;
+            justify-content: center;
+
+            img { width: 280px; }
+        }
+        
+    }
 }
