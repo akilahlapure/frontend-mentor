@@ -1,9 +1,210 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500;600&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+#wrapper .user-daniel, #wrapper .user-jonathan, #wrapper .user-jeanette, #wrapper .user-patrick, #wrapper .user-kira {
+  padding: 1.5rem;
+  border-radius: 12px;
+}
+
+#wrapper .user-daniel .profile, #wrapper .user-jonathan .profile, #wrapper .user-jeanette .profile, #wrapper .user-patrick .profile, #wrapper .user-kira .profile {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#wrapper .user-daniel .profile img, #wrapper .user-jonathan .profile img, #wrapper .user-jeanette .profile img, #wrapper .user-patrick .profile img, #wrapper .user-kira .profile img {
+  -webkit-clip-path: circle();
+          clip-path: circle();
+  width: 28px;
+  margin-right: 1rem;
+}
+
+#wrapper .user-daniel .profile h2, #wrapper .user-jonathan .profile h2, #wrapper .user-jeanette .profile h2, #wrapper .user-patrick .profile h2, #wrapper .user-kira .profile h2 {
+  font-size: 13px;
+}
+
+#wrapper .user-daniel .content h1, #wrapper .user-jonathan .content h1, #wrapper .user-jeanette .content h1, #wrapper .user-patrick .content h1, #wrapper .user-kira .content h1 {
+  font-size: 20px;
+  margin: 12px 0 12px;
+}
+
+body {
+  background-color: #ecf2f8;
+  font-family: 'Barlow Semi Condensed', sans-serif;
+  font-size: 13px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  min-height: 100vh;
+}
+
+#wrapper {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: repeat( 4, 1fr );
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  grid-auto-rows: auto;
+  padding-inline: 4rem;
+}
+
+#wrapper .user-daniel {
+  background-color: #7541c8;
+  background-image: url(../images/bg-pattern-quotation.svg);
+  background-repeat: no-repeat;
+  background-position: right top;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-column: 1 / 3;
+}
+
+#wrapper .user-daniel .profile {
+  color: white;
+}
+
+#wrapper .user-daniel .profile p {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+#wrapper .user-daniel .content {
+  color: white;
+}
+
+#wrapper .user-daniel .content p {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+#wrapper .user-jonathan {
+  background-color: #48556a;
+  -ms-grid-column: 3;
+  grid-column: 3;
+}
+
+#wrapper .user-jonathan .profile {
+  color: white;
+}
+
+#wrapper .user-jonathan .profile p {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+#wrapper .user-jonathan .content {
+  color: white;
+}
+
+#wrapper .user-jonathan .content p {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+#wrapper .user-jeanette {
+  background-color: white;
+  -ms-grid-column: 1;
+  grid-column: 1;
+  -ms-grid-row: 2;
+  grid-row: 2;
+}
+
+#wrapper .user-jeanette .profile {
+  color: #48556a;
+}
+
+#wrapper .user-jeanette .profile p {
+  color: rgba(72, 85, 106, 0.5);
+}
+
+#wrapper .user-jeanette .content {
+  color: #48556a;
+}
+
+#wrapper .user-jeanette .content p {
+  color: rgba(72, 85, 106, 0.7);
+}
+
+#wrapper .user-patrick {
+  background-color: #19212e;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 2;
+  grid-column: 2 / 4;
+  -ms-grid-row: 2;
+  grid-row: 2;
+}
+
+#wrapper .user-patrick .profile {
+  color: white;
+}
+
+#wrapper .user-patrick .profile p {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+#wrapper .user-patrick .content {
+  color: white;
+}
+
+#wrapper .user-patrick .content p {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+#wrapper .user-kira {
+  background-color: white;
+  -ms-grid-column: 4;
+  grid-column: 4;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 2;
+  grid-row: 1 / 3;
+}
+
+#wrapper .user-kira .profile {
+  color: #48556a;
+}
+
+#wrapper .user-kira .profile p {
+  color: rgba(72, 85, 106, 0.5);
+}
+
+#wrapper .user-kira .content {
+  color: #48556a;
+}
+
+#wrapper .user-kira .content p {
+  color: rgba(72, 85, 106, 0.7);
+}
+
 .attribution {
   font-size: 11px;
   text-align: center;
+  margin-top: 12px;
 }
 
 .attribution a {
   color: #3e52a3;
+}
+
+@media screen and (max-width: 768px) {
+  #wrapper {
+    display: block;
+    margin-top: 4rem;
+  }
+  #wrapper .user {
+    margin-bottom: 12px;
+  }
 }
 /*# sourceMappingURL=main.css.map */
