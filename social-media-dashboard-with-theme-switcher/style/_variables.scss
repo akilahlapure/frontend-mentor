@@ -1,0 +1,33 @@
+/************** FONT **************/
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+
+$font-family: 'Inter', sans-serif;
+
+/************* COLORS *************/
+$lime-green: hsl(163, 72%, 41%);
+$bright-red: hsl(356, 69%, 56%);
+
+// Socials
+$facebook: hsl(208, 92%, 53%);
+$twitter: hsl(203, 89%, 53%);
+$instagram: linear-gradient(hsl(37, 97%, 70%), hsl(329, 70%, 58%));
+$youtube: hsl(348, 97%, 39%);
+
+// Theme variables
+html {
+    --bg: hsl(0, 0%, 100%); // white
+    --top-bg-pattern: hsl(225, 100%, 98%); // very pale blue
+    --card-bg: hsl(227, 47%, 96%); // light grayish blue
+    --headings: hsl(230, 17%, 14%); // dark grayish blue
+    --text: hsl(228, 12%, 44%); // very dark blue
+    --toggle: hsl(230, 22%, 74%);
+}
+
+html[data-theme='dark'] {
+    --bg: hsl(230, 17%, 14%); // dark blue
+    --top-bg-pattern: hsl(232, 19%, 15%); // very dark blue
+    --card-bg: hsl(228, 28%, 20%); // dark desaturated blue
+    --headings: hsl(0, 0%, 100%); // white
+    --text: hsl(228, 34%, 66%); // desaturated blue
+    --toggle: linear-gradient(hsl(210, 78%, 56%), hsl(146, 68%, 55%));
+}
