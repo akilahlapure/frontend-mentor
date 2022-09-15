@@ -7,22 +7,12 @@
     <!-- displays site properly based on user's device -->
 
     <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+    <link rel="stylesheet" href="./style/main.css">
 
+    <!-- Icons Fontawesome -->
     <script src="https://kit.fontawesome.com/dafefe899d.js" crossorigin="anonymous"></script>
 
-    <title>Frontend Mentor | Social media dashboard with theme switcher</title>
-
-    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-    <style>
-        .attribution {
-            font-size: 11px;
-            text-align: center;
-        }
-
-        .attribution a {
-            color: hsl(228, 45%, 44%);
-        }
-    </style>
+    <title>Social media dashboard with theme switcher | Frontend Mentor</title>
 </head>
 
 <body>
@@ -39,7 +29,7 @@
             </div>
         </header>
 
-        <section>
+        <section class="summary">
             <!-- Facebook -->
             <article class="card">
                 <div>
@@ -97,16 +87,18 @@
             </article>
         </section>
 
-        <section>
+        <div>
             <h3>Overview - Today</h3>
-
+        </div>
+        
+        <section class="overview">
             <!-- Facebook -->
             <article>
-                <div>
+                <div class="title">
                     Page Views
                     <i class="fa-brands fa-square-facebook"></i>
                 </div>
-                <div>
+                <div class="num">
                     <h4>87</h4>
                     <p class="daily-change up">
                         <i class="fa-sharp fa-solid fa-caret-up"></i>
@@ -116,11 +108,11 @@
             </article>
 
             <article>
-                <div>
+                <div class="title">
                     Likes
                     <i class="fa-brands fa-square-facebook"></i>
                 </div>
-                <div>
+                <div class="num">
                     <h4>52</h4>
                     <p class="daily-change down">
                         <i class="fa-sharp fa-solid fa-caret-down"></i>
@@ -131,11 +123,11 @@
 
             <!-- Instagram -->
             <article>
-                <div>
+                <div class="title">
                     Likes
                     <i class="fa-brands fa-instagram"></i>
                 </div>
-                <div>
+                <div class="num">
                     <h4>5462</h4>
                     <p class="daily-change up">
                         <i class="fa-sharp fa-solid fa-caret-up"></i>
@@ -145,11 +137,11 @@
             </article>
 
             <article>
-                <div>
+                <div class="title">
                     Profile Views
                     <i class="fa-brands fa-instagram"></i>
                 </div>
-                <div>
+                <div class="num">
                     <h4>52k</h4>
                     <p class="daily-change up">
                         <i class="fa-sharp fa-solid fa-caret-up"></i>
@@ -160,11 +152,11 @@
 
             <!-- Twitter -->
             <article>
-                <div>
+                <div class="title">
                     Retweets
                     <i class="fa-brands fa-twitter"></i>
                 </div>
-                <div>
+                <div class="num">
                     <h4>117</h4>
                     <p class="daily-change up">
                         <i class="fa-sharp fa-solid fa-caret-up"></i>
@@ -174,11 +166,11 @@
             </article>
 
             <article>
-                <div>
+                <div class="title">
                     Likes
                     <i class="fa-brands fa-twitter"></i>
                 </div>
-                <div>
+                <div class="num">
                     <h4>507</h4>
                     <p class="daily-change up">
                         <i class="fa-sharp fa-solid fa-caret-up"></i>
@@ -189,11 +181,11 @@
 
             <!-- Youtube -->
             <article>
-                <div>
+                <div class="title">
                     Likes
                     <i class="fa-brands fa-youtube"></i>
                 </div>
-                <div>
+                <div class="num">
                     <h4>107</h4>
                     <p class="daily-change down">
                         <i class="fa-sharp fa-solid fa-caret-down"></i>
@@ -203,11 +195,11 @@
             </article>
 
             <article>
-                <div>
+                <div class="title">
                     Total Views
                     <i class="fa-brands fa-youtube"></i>
                 </div>
-                <div>
+                <div class="num">
                     <h4>1407</h4>
                     <p class="daily-change down">
                         <i class="fa-sharp fa-solid fa-caret-down"></i>
