@@ -1,6 +1,24 @@
 /************** FONT **************/
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap");
 /************* COLORS *************/
+html {
+  --bg: hsl(0, 0%, 100%);
+  --top-bg-pattern: hsl(225, 100%, 98%);
+  --card-bg: hsl(227, 47%, 96%);
+  --headings: hsl(230, 17%, 14%);
+  --text: hsl(228, 12%, 44%);
+  --toggle: hsl(230, 22%, 74%);
+}
+
+html[data-theme='dark'] {
+  --bg: hsl(230, 17%, 14%);
+  --top-bg-pattern: hsl(232, 19%, 15%);
+  --card-bg: hsl(228, 28%, 20%);
+  --headings: hsl(0, 0%, 100%);
+  --text: hsl(228, 34%, 66%);
+  --toggle: linear-gradient(hsl(210, 78%, 56%), hsl(146, 68%, 55%));
+}
+
 /********* Utility Classes ********/
 header, .overview .title, .overview .num {
   display: -webkit-box;
@@ -14,6 +32,14 @@ header, .overview .title, .overview .num {
           align-items: center;
 }
 
+.summary, .overview {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: repeat(4, 1fr);
+      grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+}
+
 /************* Reset *************/
 * {
   margin: 0;
@@ -24,7 +50,8 @@ header, .overview .title, .overview .num {
 
 /************* Styling *************/
 body {
-  font-family: 'Inter', sans-serif;
+  background-color: var(--bg);
+  font-family: "Inter", sans-serif;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -41,29 +68,47 @@ body {
   min-height: 100vh;
 }
 
-article {
-  padding: 24px 16px;
-  border-radius: 8px;
+.top {
+  background-color: var(--top-bg-pattern);
+  position: absolute;
+  top: 0;
+  z-index: -1;
+  width: 100%;
+  height: 25%;
 }
 
-.summary {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: (1fr)[4];
-      grid-template-columns: repeat(4, 1fr);
-  gap: 16px;
+h1, h2, h3, h4 {
+  color: var(--headings);
+}
+
+article {
+  background-color: var(--card-bg);
+  padding: 24px 16px;
+  border-radius: 8px;
 }
 
 .summary .card {
   text-align: center;
 }
 
-.overview {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: (1fr)[4];
-      grid-template-columns: repeat(4, 1fr);
-  gap: 16px;
+.title .fb {
+  color: #198ff5;
+}
+
+.title .ig {
+  background: -webkit-gradient(linear, left top, left bottom, from(#fdc468), to(#df4996));
+  background: linear-gradient(#fdc468, #df4996);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.title .twt {
+  color: #1ca0f2;
+}
+
+.title .yt {
+  color: #c4032a;
 }
 
 .attribution {
@@ -73,5 +118,51 @@ article {
 
 .attribution a {
   color: #3e52a3;
+}
+
+/********* Other CSS ********/
+/** Toggle switch code by: https://codepen.io/mburnette/pen/LxNxNg?editors=1100 **/
+input[type=checkbox] {
+  height: 0;
+  width: 0;
+  visibility: hidden;
+}
+
+label {
+  cursor: pointer;
+  text-indent: -9999px;
+  width: 54px;
+  height: 27px;
+  background: grey;
+  display: block;
+  border-radius: 54px;
+  position: relative;
+}
+
+label:after {
+  content: '';
+  position: absolute;
+  top: 3.5px;
+  left: 5px;
+  width: 20px;
+  height: 20px;
+  background: #fff;
+  border-radius: 20px;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+input:checked + label {
+  background: #bada55;
+}
+
+input:checked + label:after {
+  left: calc(100% - 5px);
+  -webkit-transform: translateX(-100%);
+          transform: translateX(-100%);
+}
+
+label:active:after {
+  width: 25px;
 }
 /*# sourceMappingURL=main.css.map */
