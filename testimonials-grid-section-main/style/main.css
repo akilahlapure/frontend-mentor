@@ -60,10 +60,11 @@ body {
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: repeat( 4, 1fr );
-  grid-template-columns: repeat(4, 1fr);
+      grid-template-columns: repeat(4, 1fr);
   gap: 16px;
   grid-auto-rows: auto;
   padding-inline: 4rem;
+  max-width: 1110px;
 }
 
 #wrapper .user-daniel {
@@ -191,7 +192,7 @@ body {
 .attribution {
   font-size: 11px;
   text-align: center;
-  margin-top: 12px;
+  margin: 16px auto 8px;
 }
 
 .attribution a {
