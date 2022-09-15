@@ -1,87 +1,227 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- displays site properly based on user's device -->
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | [Challenge Name Here]</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
+    <script src="https://kit.fontawesome.com/dafefe899d.js" crossorigin="anonymous"></script>
+
+    <title>Frontend Mentor | Social media dashboard with theme switcher</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+        .attribution {
+            font-size: 11px;
+            text-align: center;
+        }
+
+        .attribution a {
+            color: hsl(228, 45%, 44%);
+        }
+    </style>
 </head>
+
 <body>
 
-  Social Media Dashboard
-  Total Followers: 23,004
+    <div id="container">
+        <header>
+            <div>
+                <h1>Social Media Dashboard</h1>
+                <p>Total Followers: 23,004</p>
+            </div>
+            <div>
+                <label for="switch">Dark Mode</label>
+                <input type="checkbox" name="switch" id="switch">
+            </div>
+        </header>
 
-  Dark Mode
+        <section>
+            <!-- Facebook -->
+            <article class="card">
+                <div>
+                    <i class="fa-brands fa-square-facebook"></i>
+                    @nathanf
+                </div>
+                <h2>1987</h2>
+                <p>Followers</p>
+                <p class="daily-change up">
+                    <i class="fa-sharp fa-solid fa-caret-up"></i>
+                    12 Today
+                </p>
+            </article>
 
-  
+            <!-- Twitter -->
+            <article class="card">
+                <div>
+                    <i class="fa-brands fa-twitter"></i>
+                    @nathanf
+                </div>
+                <h2>1044</h2>
+                <p>Followers</p>
+                <p class="daily-change up">
+                    <i class="fa-sharp fa-solid fa-caret-up"></i>
+                    99 Today
+                </p>
+            </article>
 
-  @nathanf
-  1987
-  Followers
-  12 Today
+            <!-- Instagram -->
+            <article class="card">
+                <div>
+                    <i class="fa-brands fa-instagram"></i>
+                    @realnathanf
+                </div>
+                <h2>11k</h2>
+                <p>Followers</p>
+                <p class="daily-change up">
+                    <i class="fa-sharp fa-solid fa-caret-up"></i>
+                    1099 Today
+                </p>
+            </article>
 
-  @nathanf
-  1044
-  Followers
-  99 Today
+            <!-- Youtube -->
+            <article class="card">
+                <div>
+                    <i class="fa-brands fa-youtube"></i>
+                    Nathan F.
+                </div>
+                <h2>8239</h2>
+                <p>Subscribers</p>
+                <p class="daily-change down">
+                    <i class="fa-sharp fa-solid fa-caret-down"></i>
+                    144 Today
+                </p>
+            </article>
+        </section>
 
-  @realnathanf
-  11k
-  Followers
-  1099 Today
+        <section>
+            <h3>Overview - Today</h3>
 
-  Nathan F.
-  8239
-  Subscribers
-  144 Today
+            <!-- Facebook -->
+            <article>
+                <div>
+                    Page Views
+                    <i class="fa-brands fa-square-facebook"></i>
+                </div>
+                <div>
+                    <h4>87</h4>
+                    <p class="daily-change up">
+                        <i class="fa-sharp fa-solid fa-caret-up"></i>
+                        3%
+                    </p>
+                </div>
+            </article>
 
+            <article>
+                <div>
+                    Likes
+                    <i class="fa-brands fa-square-facebook"></i>
+                </div>
+                <div>
+                    <h4>52</h4>
+                    <p class="daily-change down">
+                        <i class="fa-sharp fa-solid fa-caret-down"></i>
+                        2%
+                    </p>
+                </div>
+            </article>
 
+            <!-- Instagram -->
+            <article>
+                <div>
+                    Likes
+                    <i class="fa-brands fa-instagram"></i>
+                </div>
+                <div>
+                    <h4>5462</h4>
+                    <p class="daily-change up">
+                        <i class="fa-sharp fa-solid fa-caret-up"></i>
+                        2257%
+                    </p>
+                </div>
+            </article>
 
-  Overview - Today
+            <article>
+                <div>
+                    Profile Views
+                    <i class="fa-brands fa-instagram"></i>
+                </div>
+                <div>
+                    <h4>52k</h4>
+                    <p class="daily-change up">
+                        <i class="fa-sharp fa-solid fa-caret-up"></i>
+                        1375%
+                    </p>
+                </div>
+            </article>
 
-  Page Views
-  87
-  3%
+            <!-- Twitter -->
+            <article>
+                <div>
+                    Retweets
+                    <i class="fa-brands fa-twitter"></i>
+                </div>
+                <div>
+                    <h4>117</h4>
+                    <p class="daily-change up">
+                        <i class="fa-sharp fa-solid fa-caret-up"></i>
+                        303%
+                    </p>
+                </div>
+            </article>
 
-  Likes
-  52
-  2%
+            <article>
+                <div>
+                    Likes
+                    <i class="fa-brands fa-twitter"></i>
+                </div>
+                <div>
+                    <h4>507</h4>
+                    <p class="daily-change up">
+                        <i class="fa-sharp fa-solid fa-caret-up"></i>
+                        553%
+                    </p>
+                </div>
+            </article>
 
-  Likes
-  5462
-  2257%
+            <!-- Youtube -->
+            <article>
+                <div>
+                    Likes
+                    <i class="fa-brands fa-youtube"></i>
+                </div>
+                <div>
+                    <h4>107</h4>
+                    <p class="daily-change down">
+                        <i class="fa-sharp fa-solid fa-caret-down"></i>
+                        19%
+                    </p>
+                </div>
+            </article>
 
-  Profile Views
-  52k
-  1375%
+            <article>
+                <div>
+                    Total Views
+                    <i class="fa-brands fa-youtube"></i>
+                </div>
+                <div>
+                    <h4>1407</h4>
+                    <p class="daily-change down">
+                        <i class="fa-sharp fa-solid fa-caret-down"></i>
+                        12%
+                    </p>
+                </div>
+            </article>
+        </section>
+    </div>
 
-  Retweets
-  117
-  303%
-
-  Likes
-  507
-  553%
-
-  Likes
-  107
-  19%
-
-  Total Views
-  1407
-  12%
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
+    <footer class="attribution">
+        Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+        Coded by <a href="#">Akilah Lapure</a>.
+    </footer>
 </body>
+
 </html>
