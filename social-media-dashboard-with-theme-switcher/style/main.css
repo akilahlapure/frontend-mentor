@@ -35,7 +35,7 @@ header, .overview .title, .overview .num {
 .summary, .overview {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: repeat(4, 1fr);
+  -ms-grid-columns: (1fr)[4];
       grid-template-columns: repeat(4, 1fr);
   gap: 16px;
 }
@@ -77,25 +77,79 @@ body {
   height: 25%;
 }
 
+header {
+  font-weight: 700;
+  margin-bottom: 32px;
+}
+
+header .toggle {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+header .toggle input {
+  margin-left: 12px;
+}
+
 h1, h2, h3, h4 {
   color: var(--headings);
 }
 
+p {
+  color: var(--text);
+}
+
 article {
   background-color: var(--card-bg);
-  padding: 24px 16px;
+  padding: 24px 24px;
   border-radius: 8px;
 }
 
-.summary .card {
-  text-align: center;
+article .daily-change {
+  font-size: 12px;
+  font-weight: 700;
+}
+
+article .up {
+  color: #1db489;
+}
+
+article .down {
+  color: #dc414c;
+}
+
+.title {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-weight: 700;
+  font-size: 14px;
 }
 
 .title .fb {
+  font-size: 20px;
   color: #198ff5;
 }
 
+.title .twt {
+  font-size: 20px;
+  color: #1ca0f2;
+}
+
+.title .yt {
+  font-size: 20px;
+  color: #c4032a;
+}
+
 .title .ig {
+  font-size: 20px;
   background: -webkit-gradient(linear, left top, left bottom, from(#fdc468), to(#df4996));
   background: linear-gradient(#fdc468, #df4996);
   -webkit-background-clip: text;
@@ -103,17 +157,31 @@ article {
   -webkit-text-fill-color: transparent;
 }
 
-.title .twt {
-  color: #1ca0f2;
+.summary .card {
+  text-align: center;
+  padding-inline: 36px;
 }
 
-.title .yt {
-  color: #c4032a;
+.summary .card .title i {
+  margin-right: 4px;
+}
+
+.summary .card h2 {
+  font-size: 3rem;
+  margin-top: 10px;
+}
+
+.summary .card .followers {
+  font-size: 12px;
+  letter-spacing: 3px;
+  margin-bottom: 20px;
 }
 
 .attribution {
+  color: var(--text);
   font-size: 11px;
   text-align: center;
+  margin: 12px 0 12px;
 }
 
 .attribution a {
@@ -133,7 +201,7 @@ label {
   text-indent: -9999px;
   width: 54px;
   height: 27px;
-  background: grey;
+  background: var(--toggle);
   display: block;
   border-radius: 54px;
   position: relative;

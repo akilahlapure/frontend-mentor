@@ -13,6 +13,11 @@
     gap: 16px;
 }
 
+@mixin icon($color) {
+    font-size: 20px;
+    color: $color;
+}
+
 /************* Reset *************/
 * {
     margin: 0;
@@ -34,6 +39,8 @@ body {
     min-height: 100vh;
 }
 
+// #container {max-width: 1110px;}
+
 .top {
     background-color: var(--top-bg-pattern);
     position: absolute;
@@ -45,17 +52,60 @@ body {
 
 header {
     @extend %flex-between-center;
+
+    font-weight: 700;
+    margin-bottom: 32px;
+
+    .toggle {
+        display: flex;
+        align-items: center;
+
+        input {
+            margin-left: 12px;
+        }
+    }
 }
 
 h1, h2, h3, h4 {
     color: var(--headings);
 }
 
+p {
+    color: var(--text);
+}
 // Dashboard
 article {
     background-color: var(--card-bg);
-    padding: 24px 16px;
+    padding: 24px 24px;
     border-radius: 8px;
+
+    .daily-change {
+        font-size: 12px;
+        font-weight: 700;
+    }
+    
+    .up { color: $lime-green; }
+    .down { color: $bright-red; }
+}
+
+.title {
+    display: inline-flex;
+    align-items: center;
+    font-weight: 700;
+    font-size: 14px;
+
+    .fb { @include icon($facebook); }
+    .twt { @include icon($twitter);  }
+    .yt { @include icon($youtube);  }
+    .ig { 
+        font-size: 20px;
+        background: $instagram;
+        -webkit-background-clip: text;
+        -moz-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+    
 }
 
 .summary {
@@ -63,6 +113,22 @@ article {
 
     .card {
         text-align: center;
+        padding-inline: 36px;
+
+        .title {
+            i { margin-right: 4px;}
+        }
+
+        h2 {
+            font-size: 3rem;
+            margin-top: 10px;
+        }
+
+        .followers {
+            font-size: 12px;
+            letter-spacing: 3px;
+            margin-bottom: 20px;
+        }
     }
 }
 
@@ -74,23 +140,16 @@ article {
     }
 }
 
-.title {
-    .fb { color: $facebook; }
-    .ig { 
-        background: $instagram;
-        -webkit-background-clip: text;
-        -moz-background-clip: text;
-        background-clip: text;
-        -webkit-text-fill-color: transparent;
-    }
-    .twt { color: $twitter; }
-    .yt { color: $youtube; }
-}
+
+
+
 
 // Footer
 .attribution {
+    color: var(--text);
     font-size: 11px;
     text-align: center;
+    margin: 12px 0 12px;
 
     a {
         color: hsl(228, 45%, 44%);
