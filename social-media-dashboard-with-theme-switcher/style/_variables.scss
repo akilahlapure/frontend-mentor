@@ -18,6 +18,7 @@ html {
     --bg: hsl(0, 0%, 100%); // white
     --top-bg-pattern: hsl(225, 100%, 98%); // very pale blue
     --card-bg: hsl(227, 47%, 96%); // light grayish blue
+    --card-bg-hover: #e1e3f0;
     --headings: hsl(230, 17%, 14%); // dark grayish blue
     --text: hsl(228, 12%, 44%); // very dark blue
     --toggle: hsl(230, 22%, 74%);
@@ -27,6 +28,7 @@ html[data-theme='dark'] {
     --bg: hsl(230, 17%, 14%); // dark blue
     --top-bg-pattern: hsl(232, 19%, 15%); // very dark blue
     --card-bg: hsl(228, 28%, 20%); // dark desaturated blue
+    --card-bg-hover: #333a56;
     --headings: hsl(0, 0%, 100%); // white
     --text: hsl(228, 34%, 66%); // desaturated blue
     --toggle: linear-gradient(hsl(210, 78%, 56%), hsl(146, 68%, 55%));
