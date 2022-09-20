@@ -26,7 +26,7 @@
                 <p>Total Followers: 23,004</p>
             </div>
             <div class="toggle">
-                <p class="theme-option">Dark Mode</p>
+                <p id="theme">Dark Mode</p>
                 <input type="checkbox" name="theme" id="switch" /><label for="switch">Toggle</label>
             </div>
         </header>
@@ -217,7 +217,21 @@
         Coded by <a href="#">Akilah Lapure</a>.
     </footer>
 
-
+    <!-- Change Theme Function -->
+    <script>
+        let themeOption = document.getElementById('theme');
+        let toggle = document.querySelector('input[name=theme]');
+        toggle.addEventListener('change', function() {
+                if(this.checked) {
+                    themeOption.innerHTML = "Light Mode";
+                    document.documentElement.setAttribute('data-theme', 'dark');
+                } else {
+                    themeOption.innerHTML = "Dark Mode";
+                    document.documentElement.setAttribute('data-theme', 'light');
+                }
+            }
+        );
+    </script>
 </body>
 
 </html>
