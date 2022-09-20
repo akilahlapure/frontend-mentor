@@ -39,7 +39,9 @@ body {
     min-height: 100vh;
 }
 
-// #container {max-width: 1110px;}
+#container {
+    margin-top: 24px;
+}
 
 .top {
     background-color: var(--top-bg-pattern);

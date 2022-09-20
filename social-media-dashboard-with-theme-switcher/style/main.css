@@ -37,7 +37,7 @@ header, .overview .title, .overview .num {
 .summary, .overview {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (1fr)[4];
+  -ms-grid-columns: repeat(4, 1fr);
       grid-template-columns: repeat(4, 1fr);
   gap: 16px;
 }
@@ -68,6 +68,10 @@ body {
       -ms-flex-align: center;
           align-items: center;
   min-height: 100vh;
+}
+
+#container {
+  margin-top: 24px;
 }
 
 .top {
