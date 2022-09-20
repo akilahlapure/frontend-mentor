@@ -6,6 +6,7 @@ This repository is a collection of my completed solutions for the frontend mento
 - [Challenges](#challenges)
     - [Advice Generator App](#advice-generator-app)
     - [Testimonials Grid Section](#testimonials-grid-section)
+    - [Social Media Dashboard With Theme Switcher](#social-media-dashboard-with-theme-switcher)
     - [Ping Coming Soon Page](#ping-coming-soon-page)
     - [QR Code Component](#qr-code-component)
 - [Author](#author)
@@ -30,6 +31,13 @@ This repository is a collection of my completed solutions for the frontend mento
 
 - [Code](https://github.com/akilahlapure/frontend-mentor/tree/main/testimonials-grid-section-main)
 - [Live URL](https://byooki-testimonials-grid.netlify.app/)
+
+### Social Media Dashboard With Theme Switcher
+
+![](social-media-dashboard-with-theme-switcher/screenshot.png)
+
+- [Code](https://github.com/akilahlapure/frontend-mentor/tree/main/social-media-dashboard-with-theme-switcher)
+- [Live URL](https://byooki-social-media-dashboard.netlify.app/)
 
 
 ### Ping Coming Soon Page
