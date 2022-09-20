@@ -30,7 +30,7 @@ label:after {
 }
 
 input:checked + label {
-	background: #bada55;
+	background: var(--toggle);
 }
 
 input:checked + label:after {
